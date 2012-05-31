@@ -1,0 +1,49 @@
+package {
+	name: "MahApps.Metro";
+    display-name: "MahApps.Metro";
+    location: "http://coapp.org/repository/${OutputFilename}";
+    feed: "http://coapp.org/repository/packages.atom.xml";
+    publisher: "CoApp Project";
+}
+
+requires {
+	package: "microsoft.blend.sdk-4.0.0.0-any-1e373a58e25250cb";
+}
+
+metadata {
+    licenses : {
+        "MSPL"
+    };
+    
+	description: "A UI kit for creating Metro-style WPF applications";
+    summary: "A UI kit for creating Metro-style WPF applications";
+	author-version : "pre-0.8";
+	stability : "-10";
+	icon: "COPKG\mahapps.metro.png";
+}
+
+files[dlls] {
+    root: "..\out";
+	include: {
+        "MahApps.Metro.dll"
+    };
+	
+	trim-path: minimal;
+}
+
+assemblies {
+    include : {
+      dlls
+    };
+}
+
+developer-library[dlls] {
+	reference-assemblies:
+	{
+	dlls
+	};
+    
+}
+
+
+
