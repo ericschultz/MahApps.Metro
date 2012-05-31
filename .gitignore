@@ -43,3 +43,8 @@ _ReSharper*/
 ~$*
 
 MetroDemo/publish/*
+
+out
+
+COPKG/*.msi
+COPKG/*.wixpdb
