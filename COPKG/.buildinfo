@@ -87,7 +87,7 @@ anycpu {
     default: no;
     platform : x86;
     compiler: vc10;
-    requires: "microsoft.blend.sdk-4.0.0.0-any-1e373a58e25250cb";
+    requires: "microsoft.blend.sdk-4.0.0.0-any";
     uses: clean;
     targets: { 
 	
