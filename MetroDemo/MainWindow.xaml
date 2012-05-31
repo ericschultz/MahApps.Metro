@@ -62,11 +62,12 @@
                                         </ContextMenu>
                                     </Button.ContextMenu>
                                 </Button>
-                                <PasswordBox Margin="88.695,66.96,0,0"
-                                             Height="30"
+                            <PasswordBox Controls:TextboxHelper.Watermark="Enter Password"
+                                             Margin="88.695,66.96,0,0"
                                              VerticalAlignment="Top"
                                              HorizontalAlignment="Left"
-                                             Width="154.001" />
+                                             Width="154.001"
+											 VerticalContentAlignment="Center" />
                                 <CheckBox Content="CheckBox"
                                           Margin="88.695,100.96,0,0"
                                           VerticalAlignment="Top"
@@ -76,12 +77,13 @@
                                              VerticalAlignment="Top"
                                              GroupName="test"
                                              HorizontalAlignment="Left" />
-                                <TextBox Controls:TextboxHelper.Watermark="This is a textbox"
-                                         Controls:TextboxHelper.ClearTextButton="True"
+                            <TextBox Controls:TextboxHelper.Watermark="Enter Username"
+                                     Controls:TextboxHelper.ClearTextButton="True"
                                          Margin="88.694,36.96,0,0"
                                          VerticalAlignment="Top"
                                          HorizontalAlignment="Left"
-                                         Width="154.002" />
+                                         Width="154.002"
+										 VerticalContentAlignment="Center" />
                                 <ComboBox Margin="88.292,176.84,0,0"
                                           VerticalAlignment="Top"
                                           HorizontalAlignment="Left"
@@ -209,6 +211,8 @@
                             	</Button>
 
                             <Controls:ProgressRing IsActive="True"/>
+                            <Controls:TransitioningContentControl x:Name="transitioning" Width="150" Height="50" Transition="DownTransition" />
+                            <Controls:RangeSlider Width="227" Height="25" RangeStartSelected="20" RangeStopSelected="50"/>
                         </WrapPanel>
                             <!--<Slider Height="23" HorizontalAlignment="Left" Margin="273,119,0,0" Name="slider1" VerticalAlignment="Top" Width="218" Maximum="100" Value="50" />-->
                         </Grid>

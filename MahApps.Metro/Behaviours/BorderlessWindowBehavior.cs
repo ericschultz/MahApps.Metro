@@ -84,16 +84,23 @@ namespace MahApps.Metro.Behaviours
                                                        Border.BorderThickness = new Thickness(1);
                                                };
 
-                if (AssociatedObject.ResizeMode == ResizeMode.NoResize)
+                switch (AssociatedObject.ResizeMode)
                 {
-                    window.ShowMaxRestoreButton = false;
-                    window.ShowMinButton = false;
-                    ResizeWithGrip = false;
-                }
-                else if (AssociatedObject.ResizeMode == ResizeMode.CanMinimize)
-                {
-                    window.ShowMaxRestoreButton = false;
-                    ResizeWithGrip = false;
+                    case ResizeMode.NoResize:
+                        window.ShowMaxRestoreButton = false;
+                        window.ShowMinButton = false;
+                        ResizeWithGrip = false;
+                        break;
+                    case ResizeMode.CanMinimize:
+                        window.ShowMaxRestoreButton = false;
+                        ResizeWithGrip = false;
+                        break;
+                    case ResizeMode.CanResize:
+                        ResizeWithGrip = false;
+                        break;
+                    case ResizeMode.CanResizeWithGrip:
+                        ResizeWithGrip = true;
+                        break;
                 }
             }
             else { 
@@ -176,15 +183,6 @@ namespace MahApps.Metro.Behaviours
             IntPtr returnval = IntPtr.Zero;
             switch (message)
             {
-                case Constants.WM_CREATE:
-                    handled = true;
-                    var create = (CREATESTRUCT)Marshal.PtrToStructure(lParam, typeof(CREATESTRUCT));
-                    if (create.style == Constants.WS_MAXIMIZE)
-                    {
-                        MessageBox.Show("Got here");
-                    }
-                    break;
-
                 case Constants.WM_NCCALCSIZE:
                     /* Hides the border */
                     handled = true;
