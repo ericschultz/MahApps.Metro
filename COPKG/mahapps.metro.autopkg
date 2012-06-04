@@ -15,8 +15,8 @@ metadata {
         "MSPL"
     };
     
-	description: "A UI kit for creating Metro-style WPF applications";
-    summary: "A UI kit for creating Metro-style WPF applications";
+	description: "The goal of MahApps.Metro is to allow devs to quickly and easily cobble togther a "Metro" UI for their WPF4+ apps, with minimal effort.";
+    summary: "The goal of MahApps.Metro is to allow devs to quickly and easily cobble togther a "Metro" UI for their WPF4+ apps, with minimal effort.";
 	author-version : "pre-0.8";
 	stability : "-10";
 	icon: "COPKG\mahapps.metro.png";
